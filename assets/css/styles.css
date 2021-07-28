@@ -1,0 +1,442 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #eee;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, p {
+  position: relative;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #aaa;
+}
+
+
+/* SCROLL TO TOP BUTTON - STYLE */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  font-family: monospace;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 40px 40px;
+}
+
+#myBtn:hover {
+  background-color: red;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+
+/* NAVIGATION BAR - STYLE */
+
+#mySidenav a {
+  position: fixed;
+  left: -90px;
+  z-index: 99;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  border-right: 2px solid white;
+  font-size: 20px;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  color: #fff;
+  left: 0px;
+}
+
+#home {
+  top: 20px;
+  background-color: #16213e;
+  position: relative;
+}
+
+#about {
+  top: 80px;
+  background-color: #0f3460;
+  position: relative;
+}
+
+#skills {
+  top: 140px;
+  background-color: #59405c;
+  position: relative;
+}
+
+#contact {
+  top: 200px;
+  background-color: #e94560;
+  position: relative;
+}
+
+
+/*Section 1 - Home*/
+
+.section_1 {
+  background: url(namaste.jpg) center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+.section_1::before {
+  content: "";
+  background: #1C2B2D;
+  opacity: 68%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.section_1 h1, h2 {
+  font-weight: bold;
+  color: #fff;
+}
+
+.section_1 h2 {
+  padding-top: 3%;
+  font-size: 5rem;
+}
+
+.section_1 span {
+  position: relative;
+  font-size: 20px;
+}
+
+.section_1 .image {
+  position: relative;
+  padding: 3%;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .section_1 {
+    width: 100%;
+  }
+
+  .section_1 h2 {
+    margin-top: 15%;
+    font-size: 4rem;
+  }
+
+  .section_1 .image {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding: 0;
+    width: 75%;
+  }
+}
+
+
+/* Section 2 - About*/
+
+.section_2 {
+  background: url(about.png);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 3%;
+}
+
+.section_2::before {
+  content: "";
+  background: #111;
+  opacity: 88%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#s2 h1 {
+  font-size: 6rem;
+  text-align: left;
+  font-weight: bolder;
+  padding-top: 15%;
+  text-shadow: 2px 2px red;
+  font-family: "Montserrat-black";
+}
+
+.section_2 p {
+  text-align: left;
+  opacity: 90%;
+}
+
+.section_2 .pa {
+  opacity: 95%;
+}
+
+.section_2 span {
+  font-weight: bold;
+}
+
+hr {
+  background-color: red;
+}
+
+.hr {
+  background-color: red;
+  opacity: 50%;
+}
+
+#s2 img {
+  margin-top: 38%;
+  margin-left: 15%;
+  animation: shake 10s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width:768px) {
+  #s2 img {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    padding: 5%;
+  }
+
+  #s2 h1 {
+    font-size: 5rem;
+  }
+}
+
+
+/* Section 3 - Skills*/
+
+.section_3 {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  opacity: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 2%;
+}
+
+.section_3::before {
+  content: "";
+  background: #1C2B2D;
+  opacity: 68%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.section_3 h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px darkorange;
+  padding: 4%;  
+  color: #fff;
+  position: relative;
+}
+
+#s3 h2 {
+  color: #eee;
+  padding: 3%;
+}
+
+#s3 p {
+  text-align: center;
+}
+
+#s3 img {
+  height: 50%;
+}
+
+.checked {
+  color: orange;
+}
+
+@media (max-width: 1024px) {
+  #s3 h2{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #s3 img {
+    /* width: 25%; */
+    height: 34%;
+  }
+
+  #s3 h2 {
+    padding: 0;
+    font-size: 15px;
+    border-bottom: 2px solid orange;
+  }
+}
+
+
+@media (max-width: 426px) {
+  #s3 h2{
+    font-size: 2rem;
+  }
+}
+
+
+/* Section 4 -Contact Me */
+
+.section_4 {
+  background: #E6D5B9;
+  height: 100%;
+  background-size: cover;
+  padding: 2%;
+}
+
+.section_4 h1 {
+  font-weight: bolder;
+  font-size: 4rem;
+  color: #000;
+  text-align: left;
+  line-height: 6;
+  margin-bottom: -25%;
+  text-shadow: 2px 2px #aaa;
+}
+
+.section_4 p {
+  text-align: left;
+}
+
+.section_4 .pa {
+  font-size: 25px;
+  color: #222;
+  font-weight: bolder;
+}
+
+.section_4 i {
+  color: #000;
+}
+
+.section_4 .form {
+  margin-top: 25%;
+  padding: 15%;
+}
+
+button {
+  padding: 2.5%;
+}
+
+.section_4 .fonts {
+  padding: 2%;
+  background-color: #fff;
+  opacity: 75%;
+  margin-top: 5%;
+}
+
+.section_4 .font {
+  color: brown;
+  font-size: 5rem;
+}
+
+@media (max-width: 768px) {
+  .section_4 .form {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
+  }
+
+  .section_4 .pa {
+    font-size: 14px;
+    padding: 5%;
+    margin-bottom: -2%;
+  }
+
+  .section_4 h1 {
+    line-height: 1.5;
+    font-size: 3rem;
+    padding-top: 15%;
+    padding-bottom: 20%;
+    padding-left: 5%;
+  }
+
+  .section_4 .font {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .section_4 .fonts {
+    display: flex;
+    flex-direction: row;
+  }
+}
