@@ -118,25 +118,25 @@ a:hover {
 }
 
 #home {
-  top: 20px;
+  top: 100px;
   background-color: #16213e;
   position: relative;
 }
 
 #about {
-  top: 80px;
+  top: 160px;
   background-color: #0f3460;
   position: relative;
 }
 
 #skills {
-  top: 140px;
+  top: 220px;
   background-color: #59405c;
   position: relative;
 }
 
 #contact {
-  top: 200px;
+  top: 280px;
   background-color: #e94560;
   position: relative;
 }
@@ -169,7 +169,7 @@ a:hover {
 }
 
 .section_1 h2 {
-  padding-top: 3%;
+  padding-top: 5%;
   font-size: 5rem;
 }
 
@@ -184,7 +184,13 @@ a:hover {
   width: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
+  .section_1 {
+    height: 110vh;
+  }
+}
+
+@media (max-width: 769px) {
   .section_1 {
     width: 100%;
   }
@@ -258,13 +264,19 @@ hr {
 }
 
 #s2 img {
-  margin-top: 38%;
+  margin-top: 48%;
   margin-left: 15%;
   animation: shake 10s;
   animation-iteration-count: infinite;
 }
 
-@media (max-width:768px) {
+@media (max-width:1025px) {
+  #s2 img {
+    margin-top: 64%;
+  }
+}
+
+@media (max-width:769px) {
   #s2 img {
     margin-top: 10%;
     margin-bottom: 5%;
@@ -366,11 +378,11 @@ hr {
 
 .section_4 h1 {
   font-weight: bolder;
-  font-size: 4rem;
+  font-size: 3.1rem;
   color: #000;
   text-align: left;
   line-height: 6;
-  margin-bottom: -25%;
+  margin-bottom: -10%;
   text-shadow: 2px 2px #aaa;
 }
 
@@ -409,7 +421,7 @@ button {
   font-size: 5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .section_4 .form {
     margin-top: 5%;
     margin-bottom: 5%;
